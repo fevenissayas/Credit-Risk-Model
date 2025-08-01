@@ -11,7 +11,7 @@ import shutil
 from src.data_processing import process_data
 from src.api.pydantic_models import PredictionRequest, PredictionResponse, TransactionInput
 
-project_root = "/"
+project_root = "/home/feven/Desktop/Credit-Risk-Model"
 mlruns_path = os.path.join(project_root, "mlruns")
 
 mlflow.set_tracking_uri(f"file://{mlruns_path}")
@@ -45,7 +45,7 @@ except Exception as e:
     else:
         raise RuntimeError("Could not determine MLflow experiment ID. Ensure mlruns structure is standard.")
 
-absolute_model_pkl_path = "/mlruns/820322135837684092/models/m-3d81bc9bd96a4d2b85b32ad107fdeded/artifacts/model.pkl"
+absolute_model_pkl_path = "/home/feven/Desktop/Credit-Risk-Model/mlruns/820322135837684092/models/m-3d81bc9bd96a4d2b85b32ad107fdeded/artifacts/model.pkl"
 model_version_str = "Direct PKL Load from registered model m-3d81bc9bd96a4d2b85b32ad107fdeded"
 model = None
 
