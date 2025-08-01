@@ -7,3 +7,6 @@ scikit-learn
 mlflow
 pytest
 joblib
+fastapi
+uvicorn
+flake8
